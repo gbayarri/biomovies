@@ -1,24 +1,48 @@
 {
-  "name": "vue3",
+  "name": "biomovies",
   "version": "0.1.0",
   "private": true,
+  "description": "This is the biomovies description",
+  "author": "Genís Bayarri",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider; vue-cli-service serve",
+    "lint": "vue-cli-service lint",
+    "build-vscode": "export NODE_OPTIONS=--openssl-legacy-provider; vue-cli-service build --dest main-process/dist-vue",
+    "dev:linux": "electron-builder --linux --dir",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps",
+    "pro:linux": "electron-builder --linux",
+    "start": "DEBUG=true electron .",
+    "start-vscode": "unset NODE_OPTIONS; DEBUG=true electron ."
   },
+  "main": "main-process/main.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "dotenv": "^16.0.0",
+    "electron-db": "^0.15.7",
+    "ngl": "^2.0.0-dev.36",
+    "primeflex": "^3.1.2",
+    "primeicons": "^5.0.0",
+    "primevue": "^3.11.1",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
+    "electron": "^17.0.0",
+    "electron-builder": "^22.14.13",
+    "electron-devtools-installer": "^3.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "vue-cli-plugin-electron-builder": "~2.1.1"
   },
   "eslintConfig": {
     "root": true,
@@ -32,7 +56,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/no-unused-components": "off",
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": [
     "> 1%",

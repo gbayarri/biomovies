@@ -1,0 +1,53 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400&subset=all');
+
+/* GENERIC STYLES */
+body, html { margin:0; height:100%; overflow-x: hidden; scroll-behavior: smooth; }
+a { color:#6b9080; font-weight: 600; }
+a.white-link { color:#fff; font-weight: 600; }
+body, .p-component { font-family: Open Sans; }
+label { font-size:14px; }
+hr { border: none; height: 1px; background-color: #dee2e6; margin:10px 0!important; }
+hr.subsection { border-top: dashed 1px rgba(255,255,255,0.5); height: 0!important; background-color: transparent; }
+h1 { color: #6b9080; font-size: 30px; font-weight: 400; }
+h2 { color: #6b9080; font-size: 25px; font-weight: 400; }
+.bold { font-weight: 900;}
+embed#file-container { width:100%; height: 100vh; }
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*text-align: center;*/
+    color: #2c3e50;
+}
+.main {  /*width: 80%;*/ min-height: calc(100vh - 130px); }
+.container { margin: auto; }
+
+.margin-top-5 { margin-top:5px!important; }
+.margin-top-10 { margin-top:10px!important; }
+.margin-top-20 { margin-top:20px!important; }
+.margin-top-30 { margin-top:30px!important; }
+.margin-bottom-5 { margin-bottom:5px!important; }
+.margin-bottom-10 { margin-bottom:10px!important; }
+.margin-bottom-20 { margin-bottom:20px!important; }
+.margin-bottom-30 { margin-bottom:30px!important; }
+
+/* scroll - chrome */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #858f98; }
+::-webkit-scrollbar-thumb:hover { background: #6c757d; }
+/* scroll - firefox */
+body, html { scrollbar-color: #858f98 #f1f1f1; scrollbar-width: thin; }
+
+/* buttons */
+.p-button { background: #6b9080; border: 1px solid #6b9080; }
+.p-button.p-button-outlined { border: 1px solid #6b9080; color: #6b9080; }
+.p-button:enabled:hover, .p-fileupload-choose:not(.p-disabled):hover { background: #a4c3b2; border-color: #a4c3b2; }
+.p-button.p-button-outlined:enabled:hover { border-color: #a4c3b2; color: #a4c3b2; }
+.p-button:focus { box-shadow: none!important;}
+
+/* speeddials */
+.p-speeddial-direction-up { left: calc(50% - 2rem); bottom: 2em; }
+.p-speeddial-action { background: #416455; text-decoration: none;}
