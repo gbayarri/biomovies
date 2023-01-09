@@ -53,6 +53,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // footer date
     document.getElementById("year").innerHTML = new Date().getFullYear();
 
     // bak to top
