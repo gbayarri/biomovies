@@ -11452,6 +11452,9 @@ html {
 .masthead .masthead-subheading {
   font-size: 1.25rem;
 }
+.masthead .masthead-minheading {
+  font-size: 1rem;
+}
 .masthead .masthead-avatar {
   width: 15rem;
 }

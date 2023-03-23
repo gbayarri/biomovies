@@ -56,12 +56,20 @@ window.addEventListener('DOMContentLoaded', event => {
     // footer date
     document.getElementById("year").innerHTML = new Date().getFullYear();
 
+    // SW version (TODO WHEN PUBLIC REPO)
+    /*fetch('https://raw.githubusercontent.com/gbayarri/biomovies-src/master/package.json')
+    .then(res => res.json())
+    .then(json => {
+        document.getElementById("version").innerHTML = json.version;
+        document.getElementById("versionName").innerHTML = json.versionName;
+    })*/
+
     // bak to top
     let mybutton = document.getElementById("btn-back-to-top");
 
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function () {
-    scrollFunction();
+        scrollFunction();
     };
 
     function scrollFunction() {
@@ -78,8 +86,8 @@ window.addEventListener('DOMContentLoaded', event => {
     mybutton.addEventListener("click", backToTop);
 
     function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
 });
