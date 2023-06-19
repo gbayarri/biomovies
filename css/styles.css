@@ -4903,6 +4903,7 @@ textarea.form-control-lg {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.5rem;
+  background: var(--bs-primary);
 }
 .badge:empty {
   display: none;
