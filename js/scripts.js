@@ -7,7 +7,7 @@
 // Scripts
 // 
 
-window.addEventListener('DOMContentLoaded', event => {
+window.addEventListener('DOMContentLoaded', async(event) => {
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -56,15 +56,63 @@ window.addEventListener('DOMContentLoaded', event => {
     // footer date
     document.getElementById("year").innerHTML = new Date().getFullYear();
 
+    let latest_version
     // SW version (TODO WHEN PUBLIC REPO)
-    /*fetch('https://raw.githubusercontent.com/gbayarri/biomovies-src/master/package.json')
+    fetch('https://raw.githubusercontent.com/gbayarri/biomovies-src/master/package.json')
     .then(res => res.json())
     .then(json => {
-        document.getElementById("version").innerHTML = json.version;
-        document.getElementById("versionName").innerHTML = json.versionName;
-    })*/
+        latest_version = json.version
+        document.querySelectorAll(".version").forEach(item => item.innerHTML = json.version)
+        document.querySelectorAll(".versionName").forEach(item => item.innerHTML = json.versionName)
+    })
 
-    // bak to top
+    // Releases (TODO WHEN PUBLIC REPO)
+    fetch('https://api.github.com/repos/gbayarri/biomovies-src/releases')
+    .then(res => res.json())
+    .then(json => {
+
+        // get latest
+        const latest_release = json.filter(item => item.tag_name === `v${latest_version}`)[0]
+        const assets = latest_release.assets
+        assets.forEach(item => {
+            if(item.name.indexOf('dmg') !== -1 && item.name.indexOf('arm64') !== -1) {
+                document.getElementById("arm64-dmg").classList.remove("disabled")
+                document.getElementById("arm64-dmg").setAttribute('href', item.browser_download_url);
+            }
+            if(item.name.indexOf('dmg') !== -1 && item.name.indexOf('arm64') === -1) {
+                document.getElementById("intel-dmg").classList.remove("disabled")
+                document.getElementById("intel-dmg").setAttribute('href', item.browser_download_url);
+            }
+            if(item.name.indexOf('exe') !== -1) {
+                document.getElementById("exe").classList.remove("disabled")
+                document.getElementById("exe").setAttribute('href', item.browser_download_url);
+            }
+            if(item.name.indexOf('deb') !== -1 && item.name.indexOf('amd64') !== -1) {
+                document.getElementById("amd64-deb").classList.remove("disabled")
+                document.getElementById("amd64-deb").setAttribute('href', item.browser_download_url);
+            }
+        })
+
+        // get list of releases
+        console.log(json.map(item => ({name: item.name, tag: item.tag_name, published_at: item.published_at, url: item.html_url})))
+        const releases_list = json.map(item => ({name: item.name, tag: item.tag_name, published_at: item.published_at, url: item.html_url}))
+        const selectReleases = document.getElementById("select-releases")
+        // fill select
+        releases_list.forEach(item => {
+            const d = new Date(item.published_at)
+            const publish_date = `${(d.getDate() < 10 ? '0' : '') + d.getDate()}/${(d.getMonth() < 9 ? '0' : '') + (parseInt(d.getMonth()) + 1)}/${d.getFullYear()}`
+            selectReleases.options[selectReleases.options.length] = new Option(`${item.name} - ${publish_date}`, item.url);
+        })
+        // add window action to each option
+        selectReleases.addEventListener("change", (e) => {
+            if(selectReleases.value) window.open(selectReleases.value);
+        }, false);
+        // enable select
+        selectReleases.disabled = false
+
+    })
+
+    // bac to top
     let mybutton = document.getElementById("btn-back-to-top");
 
     // When the user scrolls down 20px from the top of the document, show the button

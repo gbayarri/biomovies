@@ -493,6 +493,8 @@ progress {
   font-weight: 300;
 }
 
+.lead strong { font-weight: 700; }
+
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
@@ -11526,6 +11528,8 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.version { font-weight: 900;}
 
 #btn-back-to-top {
   position: fixed;

@@ -55,7 +55,7 @@
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">Cross-platform 3D biological structure video editor</p>
                 <!-- TODO WHEN PUBLIC REPO -->
-                <!--<p class="masthead-minheading font-weight-light mb-0">v<span id="version"></span> (<span id="versionName"></span>)</p>-->
+                <p class="masthead-minheading font-weight-light mb-0">v<span class="version"></span> (<span class="versionName"></span>)</p>
             </div>
         </header>
         <!-- Gallery Section-->
@@ -192,11 +192,15 @@
                     <div class="divider-custom-icon"><i class="fa-solid fa-download"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+                <!-- Download Section Content-->
+                <div class="row">
+                    <div class="col-lg-12"><p class="lead">Click the buttons below to download the multiple platform binaries of the <strong>Biomovies</strong> software. Currently, the latest version is <strong>v</strong><span class="version"></span>.</p></div>
+                </div>
 
                 <div class="row">
                     <div class="col-md-3">
                         <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary" href="#!">
+                            <a class="btn btn-xl btn-outline-primary disabled" id="intel-dmg" href="#!">
                                 <i class="fa-brands fa-apple"></i>
                                 macOS Intel
                             </a>
@@ -204,7 +208,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary" href="#!">
+                            <a class="btn btn-xl btn-outline-primary disabled" id="arm64-dmg" href="#!">
                                 <i class="fa-brands fa-apple"></i>
                                 macOS Apple sillicon
                             </a>
@@ -212,19 +216,32 @@
                     </div>
                     <div class="col-md-3">
                         <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary" href="#!">
+                            <a class="btn btn-xl btn-outline-primary disabled" id="exe" href="#!">
                                 <i class="fa-brands fa-windows"></i>
-                                Windows
+                                Windows x64
                             </a>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary" href="#!">
+                            <a class="btn btn-xl btn-outline-primary disabled" id="amd64-deb" href="#!">
                                 <i class="fa-brands fa-ubuntu"></i>
-                                Ubuntu
+                                Ubuntu x64
                             </a>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Download Section Content-->
+                <div class="row mt-5">
+                    <div class="col-lg-12"><p class="lead">In order to download check all versions of the <strong>Biomovies</strong> software, please select them in the dropdown menu:</p></div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-lg-6">
+                        <select class="form-select" disabled id="select-releases">
+                            <option value="">-- Please select a release --</option>
+                        </select>
                     </div>
                 </div>
             </div>
