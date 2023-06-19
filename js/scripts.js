@@ -58,16 +58,16 @@ window.addEventListener('DOMContentLoaded', async(event) => {
 
     let latest_version
     // SW version (TODO WHEN PUBLIC REPO)
-    fetch('https://raw.githubusercontent.com/gbayarri/biomovies-src/master/package.json')
+    /*fetch('https://raw.githubusercontent.com/gbayarri/biomovies-src/master/package.json')
     .then(res => res.json())
     .then(json => {
         latest_version = json.version
         document.querySelectorAll(".version").forEach(item => item.innerHTML = json.version)
         document.querySelectorAll(".versionName").forEach(item => item.innerHTML = json.versionName)
-    })
+    })*/
 
     // Releases (TODO WHEN PUBLIC REPO)
-    fetch('https://api.github.com/repos/gbayarri/biomovies-src/releases')
+    /*fetch('https://api.github.com/repos/gbayarri/biomovies-src/releases')
     .then(res => res.json())
     .then(json => {
 
@@ -94,7 +94,6 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         })
 
         // get list of releases
-        console.log(json.map(item => ({name: item.name, tag: item.tag_name, published_at: item.published_at, url: item.html_url})))
         const releases_list = json.map(item => ({name: item.name, tag: item.tag_name, published_at: item.published_at, url: item.html_url}))
         const selectReleases = document.getElementById("select-releases")
         // fill select
@@ -110,7 +109,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         // enable select
         selectReleases.disabled = false
 
-    })
+    })*/
 
     // bac to top
     let mybutton = document.getElementById("btn-back-to-top");
