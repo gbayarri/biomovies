@@ -55,7 +55,7 @@
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">Cross-platform 3D biological structure video editor</p>
                 <!-- TODO WHEN PUBLIC REPO -->
-                <!--<p class="masthead-minheading font-weight-light mb-0">v<span class="version"></span> (<span class="versionName"></span>)</p>-->
+                <p class="masthead-minheading font-weight-light mb-0">v<span class="version"></span> (<span class="versionName"></span>)</p>
             </div>
         </header>
         <!-- Gallery Section-->
@@ -174,7 +174,7 @@
                 </div>
 
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-secondary" href="#!" target="_blank">
+                    <a class="btn btn-xl btn-secondary btn-secondary-white-hover" href="#!" target="_blank">
                         <i class="fa-solid fa-book"></i>
                         &nbsp;Open documentation
                     </a>
@@ -197,39 +197,36 @@
                     <div class="col-lg-12">
                         <p class="lead">Click the buttons below to download the multiple platform binaries of the <strong>Biomovies</strong> software. 
                         <!-- TODO WHEN PUBLIC REPO -->
-                        <!-- Latest version is <span class="badge badge-danger">v<span class="version"></span> -->
+                        Latest version is <span class="badge badge-danger">v<span class="version"></span>
                         </p>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-12" style="display: flex; justify-content: space-between;">
                         <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary disabled" id="intel-dmg" href="#!">
+                            <a class="btn btn-xl btn-outline-primary disabled btn-download" id="intel-dmg" href="#!">
                                 <i class="fa-brands fa-apple"></i>
                                 macOS Intel
                             </a>
                         </div>
-                    </div>
-                    <div class="col-md-3">
+                    
                         <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary disabled" id="arm64-dmg" href="#!">
+                            <a class="btn btn-xl btn-outline-primary disabled btn-download" id="arm64-dmg" href="#!">
                                 <i class="fa-brands fa-apple"></i>
-                                macOS Apple sillicon
+                                macOS Apple Silicon
                             </a>
                         </div>
-                    </div>
-                    <div class="col-md-3">
+                    
                         <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary disabled" id="exe" href="#!">
+                            <a class="btn btn-xl btn-outline-primary disabled btn-download" id="exe" href="#!">
                                 <i class="fa-brands fa-windows"></i>
                                 Windows x64
                             </a>
                         </div>
-                    </div>
-                    <div class="col-md-3">
+                    
                         <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary disabled" id="amd64-deb" href="#!">
+                            <a class="btn btn-xl btn-outline-primary disabled btn-download" id="amd64-deb" href="#!">
                                 <i class="fa-brands fa-ubuntu"></i>
                                 Ubuntu x64
                             </a>
@@ -243,10 +240,28 @@
                 </div>
 
                 <div class="row mt-2">
-                    <div class="col-lg-6">
+                    <div class="col-xl-5 col-lg-4">
                         <select class="form-select" disabled id="select-releases">
                             <option value="">-- Please select a release --</option>
                         </select>
+                    </div>
+                    <div class="col-xl-7 col-lg-8" id="sec-assets" style="display: flex; justify-content: space-between; display: none;">
+                        <a class="btn btn-xs btn-outline-secondary disabled btn-download-sec" id="intel-dmg-sec" href="#!">
+                            <i class="fa-brands fa-apple"></i>
+                            macOS Intel
+                        </a>
+                        <a class="btn btn-xs btn-outline-secondary disabled btn-download-sec" id="arm64-dmg-sec" href="#!">
+                            <i class="fa-brands fa-apple"></i>
+                            macOS Apple Silicon
+                        </a>
+                        <a class="btn btn-xs btn-outline-secondary disabled btn-download-sec" id="exe-sec" href="#!">
+                            <i class="fa-brands fa-windows"></i>
+                            Windows x64
+                        </a>
+                        <a class="btn btn-xs btn-outline-secondary disabled btn-download-sec" id="amd64-deb-sec" href="#!">
+                            <i class="fa-brands fa-ubuntu"></i>
+                            Ubuntu x64
+                        </a>
                     </div>
                 </div>
             </div>
