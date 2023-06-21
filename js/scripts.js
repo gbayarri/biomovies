@@ -58,16 +58,16 @@ window.addEventListener('DOMContentLoaded', async(event) => {
 
     let latest_version
     // SW version (TODO WHEN PUBLIC REPO)
-    fetch('https://raw.githubusercontent.com/gbayarri/biomovies-src/master/package.json')
+    /*fetch('https://raw.githubusercontent.com/gbayarri/biomovies-src/master/package.json')
     .then(res => res.json())
     .then(json => {
         latest_version = json.version
         document.querySelectorAll(".version").forEach(item => item.innerHTML = json.version)
         document.querySelectorAll(".versionName").forEach(item => item.innerHTML = json.versionName)
-    })
+    })*/
 
     // Releases (TODO WHEN PUBLIC REPO)
-    fetch('https://api.github.com/repos/gbayarri/biomovies-src/releases')
+    /*fetch('https://api.github.com/repos/gbayarri/biomovies-src/releases')
     .then(res => res.json())
     .then(json => {
 
@@ -134,10 +134,9 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         }, false);
         // enable select
         selectReleases.disabled = false
+    })*/
 
-    })
-
-    // bac to top
+    // back to top
     let mybutton = document.getElementById("btn-back-to-top");
 
     // When the user scrolls down 20px from the top of the document, show the button
