@@ -93,9 +93,11 @@ window.addEventListener('DOMContentLoaded', async(event) => {
             }
         })
 
+        const old_releases = json.filter(item => item.tag_name !== `v${latest_version}`)
+
         const selectReleases = document.getElementById("select-releases")
         // fill select with release name and date
-        json.forEach(item => {
+        old_releases.forEach(item => {
             const d = new Date(item.published_at)
             const publish_date = `${(d.getDate() < 10 ? '0' : '') + d.getDate()}/${(d.getMonth() < 9 ? '0' : '') + (parseInt(d.getMonth()) + 1)}/${d.getFullYear()}`
             //selectReleases.options[selectReleases.options.length] = new Option(`${item.name} - ${publish_date}`, item.url);
@@ -111,7 +113,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
             if(selectReleases.value) {
                 // show secondary buttons and enable / add links if necessary
                 document.getElementById("sec-assets").style.display = "flex"
-                var sec_assets = json.filter(item => item.tag_name === selectReleases.value)[0].assets
+                var sec_assets = old_releases.filter(item => item.tag_name === selectReleases.value)[0].assets
                 sec_assets.forEach(item => {
                     if(item.name.indexOf('dmg') !== -1 && item.name.indexOf('arm64') !== -1) {
                         document.getElementById("arm64-dmg-sec").classList.remove("disabled")
