@@ -242,6 +242,8 @@ a {
 a:hover {
   color: #83c3a7;
 }
+a.white-link { color: #fff; }
+a.white-link:hover { color: #cde8dc; }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
