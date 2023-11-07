@@ -76,20 +76,29 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         const assets = latest_release.assets
         assets.forEach(item => {
             if(item.name.indexOf('dmg') !== -1 && item.name.indexOf('arm64') !== -1) {
+                document.getElementById("dropdownMenuButtonApple").classList.remove("disabled")
                 document.getElementById("arm64-dmg").classList.remove("disabled")
                 document.getElementById("arm64-dmg").setAttribute('href', item.browser_download_url);
             }
             if(item.name.indexOf('dmg') !== -1 && item.name.indexOf('arm64') === -1) {
+                document.getElementById("dropdownMenuButtonApple").classList.remove("disabled")
                 document.getElementById("intel-dmg").classList.remove("disabled")
                 document.getElementById("intel-dmg").setAttribute('href', item.browser_download_url);
             }
             if(item.name.indexOf('exe') !== -1) {
+                document.getElementById("dropdownMenuButtonWin").classList.remove("disabled")
                 document.getElementById("exe").classList.remove("disabled")
                 document.getElementById("exe").setAttribute('href', item.browser_download_url);
             }
-            if(item.name.indexOf('deb') !== -1 && item.name.indexOf('amd64') !== -1) {
+            if(item.name.indexOf('deb') !== -1) {
+                document.getElementById("dropdownMenuButtonUbuntu").classList.remove("disabled")
                 document.getElementById("amd64-deb").classList.remove("disabled")
                 document.getElementById("amd64-deb").setAttribute('href', item.browser_download_url);
+            }
+            if(item.name.indexOf('AppImage') !== -1) {
+                document.getElementById("dropdownMenuButtonUbuntu").classList.remove("disabled")
+                document.getElementById("amd64-appimage").classList.remove("disabled")
+                document.getElementById("amd64-appimage").setAttribute('href', item.browser_download_url);
             }
         })
 
@@ -110,26 +119,36 @@ window.addEventListener('DOMContentLoaded', async(event) => {
             document.getElementById("intel-dmg-sec").classList.add("disabled")
             document.getElementById("exe-sec").classList.add("disabled")
             document.getElementById("amd64-deb-sec").classList.add("disabled")
+            document.getElementById("amd64-appimage-sec").classList.add("disabled")
             if(selectReleases.value) {
                 // show secondary buttons and enable / add links if necessary
                 document.getElementById("sec-assets").style.display = "flex"
                 var sec_assets = old_releases.filter(item => item.tag_name === selectReleases.value)[0].assets
                 sec_assets.forEach(item => {
                     if(item.name.indexOf('dmg') !== -1 && item.name.indexOf('arm64') !== -1) {
+                        document.getElementById("dropdownMenuButtonAppleSec").classList.remove("disabled")
                         document.getElementById("arm64-dmg-sec").classList.remove("disabled")
                         document.getElementById("arm64-dmg-sec").setAttribute('href', item.browser_download_url);
                     }
                     if(item.name.indexOf('dmg') !== -1 && item.name.indexOf('arm64') === -1) {
+                        document.getElementById("dropdownMenuButtonAppleSec").classList.remove("disabled")
                         document.getElementById("intel-dmg-sec").classList.remove("disabled")
                         document.getElementById("intel-dmg-sec").setAttribute('href', item.browser_download_url);
                     }
                     if(item.name.indexOf('exe') !== -1) {
+                        document.getElementById("dropdownMenuButtonWinSec").classList.remove("disabled")
                         document.getElementById("exe-sec").classList.remove("disabled")
                         document.getElementById("exe-sec").setAttribute('href', item.browser_download_url);
                     }
-                    if(item.name.indexOf('deb') !== -1 && item.name.indexOf('amd64') !== -1) {
+                    if(item.name.indexOf('deb') !== -1) {
+                        document.getElementById("dropdownMenuButtonUbuntuSec").classList.remove("disabled")
                         document.getElementById("amd64-deb-sec").classList.remove("disabled")
                         document.getElementById("amd64-deb-sec").setAttribute('href', item.browser_download_url);
+                    }
+                    if(item.name.indexOf('AppImage') !== -1) {
+                        document.getElementById("dropdownMenuButtonUbuntuSec").classList.remove("disabled")
+                        document.getElementById("amd64-appimage-sec").classList.remove("disabled")
+                        document.getElementById("amd64-appimage-sec").setAttribute('href', item.browser_download_url);
                     }
                 })
             } else document.getElementById("sec-assets").style.display = "none"

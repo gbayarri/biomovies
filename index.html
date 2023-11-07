@@ -291,34 +291,40 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12" style="display: flex; justify-content: space-between;">
-                        <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary disabled btn-download" id="intel-dmg" href="#!">
-                                <i class="fa-brands fa-apple"></i>
-                                macOS Universal
-                            </a>
+                    <div class="col-md-12" style="display: flex; justify-content: space-evenly;">
+
+                        <div class="dropdown mt-4">
+                            <button class="btn btn-xl btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonApple" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-brands fa-apple"></i> 
+                                macOS
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item disabled download-latest" href="#!" id="intel-dmg"><i class="fa-solid fa-download me-2"></i> macOS Universal</a></li>
+                              <li><a class="dropdown-item disabled download-latest" href="#!" id="arm64-dmg"><i class="fa-solid fa-download me-2"></i> macOS Apple Silicon</a></li>
+                            </ul>
                         </div>
-                    
-                        <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary disabled btn-download" id="arm64-dmg" href="#!">
-                                <i class="fa-brands fa-apple"></i>
-                                macOS Apple Silicon
-                            </a>
+
+                        <div class="dropdown mt-4">
+                            <button class="btn btn-xl btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonWin" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-brands fa-windows"></i> 
+                                Windows
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item disabled download-latest" id="exe" href="#!"><i class="fa-solid fa-download me-2"></i> Windows executable</a></li>
+                            </ul>
                         </div>
-                    
-                        <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary disabled btn-download" id="exe" href="#!">
-                                <i class="fa-brands fa-windows"></i>
-                                Windows x64
-                            </a>
+
+                        <div class="dropdown mt-4">
+                            <button class="btn btn-xl btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonUbuntu" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-brands fa-ubuntu"></i> 
+                                Ubuntu
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item disabled download-latest" id="amd64-deb" href="#!"><i class="fa-solid fa-download me-2"></i> Ubuntu .deb file</a></li>
+                              <li><a class="dropdown-item disabled download-latest" id="amd64-appimage" href="#!"><i class="fa-solid fa-download me-2"></i> Ubuntu .AppImage file</a></li>
+                            </ul>
                         </div>
-                    
-                        <div class="text-center mt-4">
-                            <a class="btn btn-xl btn-outline-primary disabled btn-download" id="amd64-deb" href="#!">
-                                <i class="fa-brands fa-ubuntu"></i>
-                                Ubuntu x64
-                            </a>
-                        </div>
+
                     </div>
                 </div>
 
@@ -333,23 +339,40 @@
                             <option value="">-- Please select a release --</option>
                         </select>
                     </div>
-                    <div class="col-xl-7 col-lg-8" id="sec-assets" style="display: flex; justify-content: space-between; display: none;">
-                        <a class="btn btn-xs btn-outline-secondary disabled btn-download-sec" id="intel-dmg-sec" href="#!">
-                            <i class="fa-brands fa-apple"></i>
-                            macOS Universal
-                        </a>
-                        <a class="btn btn-xs btn-outline-secondary disabled btn-download-sec" id="arm64-dmg-sec" href="#!">
-                            <i class="fa-brands fa-apple"></i>
-                            macOS Apple Silicon
-                        </a>
-                        <a class="btn btn-xs btn-outline-secondary disabled btn-download-sec" id="exe-sec" href="#!">
-                            <i class="fa-brands fa-windows"></i>
-                            Windows x64
-                        </a>
-                        <a class="btn btn-xs btn-outline-secondary disabled btn-download-sec" id="amd64-deb-sec" href="#!">
-                            <i class="fa-brands fa-ubuntu"></i>
-                            Ubuntu x64
-                        </a>
+                    <div class="col-xl-7 col-lg-8" id="sec-assets" style="display: flex; justify-content: flex-start; display:none;">
+
+                        <div class="dropdown me-3">
+                            <button class="btn btn-xs btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonAppleSec" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-brands fa-apple"></i> 
+                                macOS
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item disabled btn-sm download-sec" href="#!" id="intel-dmg-sec"><i class="fa-solid fa-download"></i> macOS Universal</a></li>
+                              <li><a class="dropdown-item disabled btn-sm download-sec" href="#!" id="arm64-dmg-sec"><i class="fa-solid fa-download"></i> macOS Apple Silicon</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown me-3">
+                            <button class="btn btn-xs btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonWinSec" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-brands fa-windows"></i> 
+                                Windows
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item disabled btn-sm download-sec" id="exe-sec" href="#!"><i class="fa-solid fa-download"></i> Windows executable</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-xs btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonUbuntuSec" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-brands fa-ubuntu"></i> 
+                                Ubuntu
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item disabled btn-sm download-sec" id="amd64-deb-sec" href="#!"><i class="fa-solid fa-download"></i> Ubuntu .deb file</a></li>
+                              <li><a class="dropdown-item disabled btn-sm download-sec" id="amd64-appimage-sec" href="#!"><i class="fa-solid fa-download"></i> Ubuntu .AppImage file</a></li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>

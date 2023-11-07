@@ -11569,3 +11569,9 @@ html {
 .minitit-gallery {
   font-size:1.2rem;
 }
+
+.btn-outline-primary.dropdown-toggle.show:focus { box-shadow: 0 0 0 0.25rem rgb(184 184 184 / 50%); }
+.form-select:focus { border-color: #a5a5a5; box-shadow: 0 0 0 0.25rem rgb(184 184 184 / 50%); }
+
+.download-latest { color: var(--bs-primary); font-size: 18px; }
+.download-sec { color: var(--bs-gray-700); }
