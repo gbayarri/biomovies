@@ -183,4 +183,18 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         document.documentElement.scrollTop = 0;
     }
 
+    const downloadManual = (url, filename) => {
+        fetch(url).then(async function(t) {
+            const b = await t.blob();
+            var a = document.createElement("a");
+            a.href = URL.createObjectURL(b);
+            a.setAttribute("download", filename);
+            a.click();
+        });
+    }
+
+    document.getElementById("downloadPDF").addEventListener('click', function () {
+        downloadManual("https://biomovies.readthedocs.io/_/downloads/en/latest/pdf/", "biomovies.pdf")
+      })
+
 });
