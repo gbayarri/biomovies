@@ -113,9 +113,10 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         // fill select with release name and date
         old_releases.forEach(item => {
             const d = new Date(item.published_at)
-            const publish_date = `${(d.getDate() < 10 ? '0' : '') + d.getDate()}/${(d.getMonth() < 9 ? '0' : '') + (parseInt(d.getMonth()) + 1)}/${d.getFullYear()}`
+            //const publish_date = `${(d.getDate() < 10 ? '0' : '') + d.getDate()}/${(d.getMonth() < 9 ? '0' : '') + (parseInt(d.getMonth()) + 1)}/${d.getFullYear()}`
             //selectReleases.options[selectReleases.options.length] = new Option(`${item.name} - ${publish_date}`, item.url);
-            selectReleases.options[selectReleases.options.length] = new Option(`${item.name} - ${publish_date}`, item.tag_name);
+            //selectReleases.options[selectReleases.options.length] = new Option(`${item.name} - ${publish_date}`, item.tag_name);
+            selectReleases.options[selectReleases.options.length] = new Option(`${item.name}`, item.tag_name);
         })
         // add window action to each option
         selectReleases.addEventListener("change", (e) => {
