@@ -57,7 +57,6 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     document.getElementById("year").innerHTML = new Date().getFullYear();
 
     let latest_version
-    // Releases (TODO WHEN PUBLIC REPO)
     fetch('https://api.github.com/repos/gbayarri/biomovies-app/releases')
     .then(res => res.json())
     .then(json => {
@@ -71,7 +70,8 @@ window.addEventListener('DOMContentLoaded', async(event) => {
 
         // get release version name
         let versionName
-        if(latest_release.body.indexOf('Alpha') !== -1) versionName = 'Alpha'
+        if(latest_release.body.indexOf('Pre-alpha') !== -1) versionName = 'Pre-alpha'
+		else if(latest_release.body.indexOf('Alpha') !== -1) versionName = 'Alpha'
         else if(latest_release.body.indexOf('Beta') !== -1) versionName = 'Beta'
         else if(latest_release.body.indexOf('Release') !== -1) versionName = 'Release'
         else versionName = 'Unknown'		
@@ -112,11 +112,16 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         const selectReleases = document.getElementById("select-releases")
         // fill select with release name and date
         old_releases.forEach(item => {
-            const d = new Date(item.published_at)
+            //const d = new Date(item.published_at)
+            let publish_date
+
+            const body = item.body.split('\r\n')
+            body.forEach((itm, index) => { if(itm.length && itm.indexOf('[') !== -1 && itm.indexOf(']') !== -1) publish_date = itm.replace(/\[/g, '').replace(/\]/g, '') })
+
             //const publish_date = `${(d.getDate() < 10 ? '0' : '') + d.getDate()}/${(d.getMonth() < 9 ? '0' : '') + (parseInt(d.getMonth()) + 1)}/${d.getFullYear()}`
             //selectReleases.options[selectReleases.options.length] = new Option(`${item.name} - ${publish_date}`, item.url);
-            //selectReleases.options[selectReleases.options.length] = new Option(`${item.name} - ${publish_date}`, item.tag_name);
-            selectReleases.options[selectReleases.options.length] = new Option(`${item.name}`, item.tag_name);
+            selectReleases.options[selectReleases.options.length] = new Option(`${item.name} - ${publish_date}`, item.tag_name);
+            //selectReleases.options[selectReleases.options.length] = new Option(`${item.name}`, item.tag_name);
         })
         // add window action to each option
         selectReleases.addEventListener("change", (e) => {
