@@ -131,6 +131,9 @@ window.addEventListener('DOMContentLoaded', async(event) => {
             document.getElementById("exe-sec").classList.add("disabled")
             document.getElementById("amd64-deb-sec").classList.add("disabled")
             document.getElementById("amd64-appimage-sec").classList.add("disabled")
+            document.getElementById("dropdownMenuButtonAppleSec").classList.add("disabled")
+            document.getElementById("dropdownMenuButtonUbuntuSec").classList.add("disabled")
+            document.getElementById("dropdownMenuButtonWinSec").classList.add("disabled")
             if(selectReleases.value) {
                 // show secondary buttons and enable / add links if necessary
                 document.getElementById("sec-assets").style.display = "flex"
