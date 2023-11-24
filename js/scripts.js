@@ -57,22 +57,27 @@ window.addEventListener('DOMContentLoaded', async(event) => {
     document.getElementById("year").innerHTML = new Date().getFullYear();
 
     let latest_version
-    // SW version (TODO WHEN PUBLIC REPO)
-    /*fetch('https://raw.githubusercontent.com/gbayarri/biomovies-src/master/package.json')
-    .then(res => res.json())
-    .then(json => {
-        latest_version = json.version
-        document.querySelectorAll(".version").forEach(item => item.innerHTML = json.version)
-        document.querySelectorAll(".versionName").forEach(item => item.innerHTML = json.versionName)
-    })*/
-
     // Releases (TODO WHEN PUBLIC REPO)
-    /*fetch('https://api.github.com/repos/gbayarri/biomovies-src/releases')
+    fetch('https://api.github.com/repos/gbayarri/biomovies-app/releases')
     .then(res => res.json())
     .then(json => {
+
+        // get latest version
+        latest_version = json[0].tag_name.replace('v', '')
+        document.querySelectorAll(".version").forEach(item => item.innerHTML = latest_version)
 
         // get latest
         const latest_release = json.filter(item => item.tag_name === `v${latest_version}`)[0]
+
+        // get release version name
+        let versionName
+        if(latest_release.body.indexOf('Alpha') !== -1) versionName = 'Alpha'
+        else if(latest_release.body.indexOf('Beta') !== -1) versionName = 'Beta'
+        else if(latest_release.body.indexOf('Release') !== -1) versionName = 'Release'
+        else versionName = 'Unknown'		
+
+        document.querySelectorAll(".versionName").forEach(item => item.innerHTML = versionName)
+
         const assets = latest_release.assets
         assets.forEach(item => {
             if(item.name.indexOf('dmg') !== -1 && item.name.indexOf('arm64') !== -1) {
@@ -155,7 +160,7 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         }, false);
         // enable select
         selectReleases.disabled = false
-    })*/
+    })
 
     // back to top
     let mybutton = document.getElementById("btn-back-to-top");
