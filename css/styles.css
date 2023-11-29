@@ -11523,6 +11523,7 @@ html {
   color: #6b9080;
   font-size: 2rem;
   padding: 1rem;
+  box-shadow: none;
 }
 .portfolio-modal .portfolio-modal-title {
   font-size: 2.25rem;
