@@ -11535,11 +11535,21 @@ html {
     line-height: 2.5rem;
   }
 }
+#sec-assets .btn {
+  margin-right: 1rem;
+}
 @media (max-width: 992px) {
-  #sec-assets { margin-top: 1rem;}
+  #sec-assets .btn { margin-top: 1rem;}
 }
 @media (max-width: 576px) {
+  h5 { font-size:1.5rem!important; }
   .btn-download, .btn-download-sec { padding:0; font-size: .8rem!important; }
+  .masthead {
+    padding-top: calc(3rem + 74px);
+  }
+  .masthead .masthead-avatar {
+    width: 10rem;
+  }
 }
 
 .footer {
@@ -11576,3 +11586,39 @@ html {
 
 .download-latest { color: var(--bs-primary); font-size: 18px; }
 .download-sec { color: var(--bs-gray-700); }
+
+#download-btns-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.yt-container {
+  width: 560px;
+  height: 315px;
+}
+
+@media (max-width: 768px) {
+  #download-btns-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #help-btns-container {
+    flex-direction: column;
+      align-items: center;
+  }
+  .yt-container {
+    width: auto;
+    height: auto;
+  }
+  p.lead {
+    text-align: center;
+  }
+  #sec-assets {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+}

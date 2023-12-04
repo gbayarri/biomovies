@@ -54,7 +54,7 @@
                 </div>
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">Cross-platform 3D biological structure video editor.</p> 
-                <p class="mt-4" style="font-size: 16px; width: 750px;">This is a <strong>non-profit experimental</strong> software in its <strong>Beta</strong> version, 
+                <p class="mt-4" style="font-size: 16px; max-width: 750px;">This is a <strong>non-profit experimental</strong> software in its <strong>Beta</strong> version, 
                     so be aware that some <strong>bugs</strong> can happen during the execution. Please <strong>save</strong> your projects as often as you 
                     can and <a href="https://github.com/gbayarri/biomovies-app/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=" class="white-link fw-bold" target="_blank">let us know</a> if some bug is found.</p>
                 <p class="masthead-minheading font-weight-light mb-0">v<span class="version"></span> (<span class="versionName"></span>)</p>
@@ -286,13 +286,13 @@
                     </div>
                 </div>
 
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-secondary btn-secondary-white-hover" href="https://biomovies-documentation.readthedocs.io/en/latest" target="_blank">
+                <div class="text-center" id="help-btns-container">
+                    <a class="btn btn-xl btn-secondary btn-secondary-white-hover mt-4" href="https://biomovies-documentation.readthedocs.io/en/latest" target="_blank">
                         <i class="fa-solid fa-book"></i>
                         &nbsp;Online documentation
                     </a>
 
-                    <a class="btn btn-xl btn-secondary btn-secondary-white-hover ms-2" href="https://biomovies.readthedocs.io/_/downloads/en/latest/pdf/" target="_blank">
+                    <a class="btn btn-xl btn-secondary btn-secondary-white-hover ms-2 mt-4" href="https://biomovies.readthedocs.io/_/downloads/en/latest/pdf/" target="_blank">
                         <i class="fa-solid fa-file-pdf"></i>
                         &nbsp;Open in PDF
                     </a>
@@ -322,7 +322,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12" style="display: flex; justify-content: space-evenly;">
+                    <div class="col-md-12" id="download-btns-container" style="display: flex; justify-content: space-evenly;">
 
                         <div class="dropdown mt-4">
                             <button class="btn btn-xl btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonApple" data-bs-toggle="dropdown" aria-expanded="false">
@@ -372,7 +372,7 @@
                     </div>
                     <div class="col-xl-7 col-lg-8" id="sec-assets" style="display: flex; justify-content: flex-start; display:none;">
 
-                        <div class="dropdown me-3">
+                        <div class="dropdown">
                             <button class="btn btn-xs btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonAppleSec" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-brands fa-apple"></i> 
                                 macOS
@@ -383,7 +383,7 @@
                             </ul>
                         </div>
 
-                        <div class="dropdown me-3">
+                        <div class="dropdown">
                             <button class="btn btn-xs btn-outline-primary dropdown-toggle disabled" type="button" id="dropdownMenuButtonWinSec" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-brands fa-windows"></i> 
                                 Windows
@@ -466,7 +466,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/el2Qg4BAoNM?si=rQRvMt0cNiUVAKOa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/el2Qg4BAoNM?si=rQRvMt0cNiUVAKOa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">Journey through the association of three two-k-turn units forming a triangular-shaped structure. PDB Code 5G4U.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -498,7 +498,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/S5YcSW3ZUWk?si=2bC6Fo31nhEKv2wt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/S5YcSW3ZUWk?si=2bC6Fo31nhEKv2wt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">View of Arginine/Lysine contacts in a selection of Transcription Factor binding sites. PDB Codes 1A66, 1A0A, 1CDW.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -530,7 +530,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kA9sKScqTDY?si=cycWGZezpEnTwwXu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/kA9sKScqTDY?si=cycWGZezpEnTwwXu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">Simulation of the Receptor Binding Domain (RBD) opening from the SARS-Cov-2 Spike protein before infection. PDB Code 6VXX.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -562,7 +562,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5WPa9s8HD8U?si=glFjS-T0jQ6dAUTF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/5WPa9s8HD8U?si=glFjS-T0jQ6dAUTF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">Coarse-Grained trajectory of a long DNA fiber with 4 proteins attached, obtained from MonteCarlo MCDNA simulations. Protein PDB Codes 1WTR, 3ZHM, 1BNZ, 1VFC.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -594,7 +594,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pBK5TBCWzMo?si=QJIrsu66jBTuNcYD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/pBK5TBCWzMo?si=QJIrsu66jBTuNcYD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">Protein-membrane system for the human gamma-aminobutyric acid receptor, taken from MemProtMD database. PDB Code 4COF.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -626,7 +626,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nMxMfyTsxgU?si=c2G3lZBOwWn4DPKz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/nMxMfyTsxgU?si=c2G3lZBOwWn4DPKz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">Conformational transition of the Adenylate Kinase enzyme, computed with the GOdMD tool. PDB Codes 1AKE (Closed conformation), 4AKE (Open conformation).</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -658,7 +658,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xylAQVTfeXk?si=qxMQdKJ9svlXkJun" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/xylAQVTfeXk?si=qxMQdKJ9svlXkJun" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">Binding site prediction from unsupervised blind docking using hamiltonian Replica Exchange technique. PDB Code 3TNE.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -690,7 +690,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SS9QYXp8MU4?si=1IHlV5aoQ_gSD9ZD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/SS9QYXp8MU4?si=1IHlV5aoQ_gSD9ZD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">Highlight of the H3 Histone protein from the Nucleosome system. PDB Code 1KX5.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -722,7 +722,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-cEe-mtP2VU?si=vcSTDwhv83HPRgb2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe class="yt-container" src="https://www.youtube.com/embed/-cEe-mtP2VU?si=vcSTDwhv83HPRgb2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">Dissection of a virus envelope molecule components, from its constituent proteins to the complete outermost layer. Venezuelan Equine Encephalitis virus (VEEV), PDB Code 7SFV.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -756,7 +756,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fBZTpkL-j-I?si=6UUy1lSCGShfLyHp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/fBZTpkL-j-I?si=6UUy1lSCGShfLyHp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">In this tutorial we can see how easy is to <strong>create a movie</strong> with a transition between two clips with <strong>different representations and orientations</strong>. More <strong>information in the subtitles</strong> of the video, please <strong>enable</strong> them in case you have captions disabled in your <strong>personal settings</strong>.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -789,7 +789,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3QKjLADyqoI?si=qwpYP0nCrcEDgNug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/3QKjLADyqoI?si=qwpYP0nCrcEDgNug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">In this tutorial we <strong>create a movie</strong> with different clips and representations with <strong>custom selections</strong>. We add different <strong>transitions</strong> such as transitions between clips and <strong>fades</strong> as well. More <strong>information in the subtitles</strong> of the video, please <strong>enable</strong> them in case you have captions disabled in your <strong>personal settings</strong>.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -822,7 +822,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PZPbqmwKfzI?si=L2rLMmIt7jrMJii8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/PZPbqmwKfzI?si=L2rLMmIt7jrMJii8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">In this tutorial we <strong>create a movie</strong> with different clips and representations and custom selections providing a <strong>trajectory</strong> and its corresponding <strong>topology</strong>. We see in deep how to modify the <strong>trajectory parameters</strong>. More <strong>information in the subtitles</strong> of the video, please <strong>enable</strong> them in case you have captions disabled in your <strong>personal settings</strong>.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -855,7 +855,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ayFxjHrl5pw?si=xqgInZ5jqlz7Oorf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/ayFxjHrl5pw?si=xqgInZ5jqlz7Oorf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">In this tutorial we review the different <strong>options</strong> provided for the sake of creating <strong>representations</strong>. As we can see, a <strong>distance based selection</strong> is easy to implement. More <strong>information in the subtitles</strong> of the video, please <strong>enable</strong> them in case you have captions disabled in your <strong>personal settings</strong>.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -888,7 +888,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LgRZVjD-6J8?si=0tU7zJPNlNXMFOzK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/LgRZVjD-6J8?si=0tU7zJPNlNXMFOzK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">In this tutorial we see all the <strong>options</strong> given by the <strong>Timeline menu</strong>. More <strong>information in the subtitles</strong> of the video, please <strong>enable</strong> them in case you have captions disabled in your <strong>personal settings</strong>.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -921,7 +921,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/K3CigLSiUUo?si=BzTVHSGFgQnMnYT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe  class="yt-container" src="https://www.youtube.com/embed/K3CigLSiUUo?si=BzTVHSGFgQnMnYT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="my-4">In this tutorial we see how to modify different <strong>trajectory settings</strong> such as <strong>range</strong>, <strong>step</strong>, <strong>timeout</strong> or <strong>play in reverse</strong>. Also it's shown how to <strong>fit a whole trajectory</strong> in a given <strong>clip</strong>. More <strong>information in the subtitles</strong> of the video, please <strong>enable</strong> them in case you have captions disabled in your <strong>personal settings</strong>.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
